@@ -18,6 +18,7 @@
 
 /* Home */
 @import url('./sections/home/hero.scss');
+@import url('./sections/home/advant.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
