@@ -61,7 +61,7 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1.9375rem;
   background-color: var(--cb2);
 }
 .card-prod__mark {
@@ -122,7 +122,6 @@
   right: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
   gap: 1.5rem;
   li {
     color: var(--cd3);
@@ -154,11 +153,135 @@
   }
 
   .card-prod {
-    min-height: 19rem;
+    min-height: 16.875rem;
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
       grid-area: auto;
     }
+    &:nth-child(3) {
+      .card-prod__box {
+        padding-bottom: 0.9375rem;
+      }
+      .card-prod__mark {
+        margin-bottom: 1rem;
+      }
+      .card-prod__content {
+        .tl3 {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .graph {
+        top: 0;
+        bottom: auto;
+        right: 1rem;
+        width: 21.6875rem;
+        height: 100%;
+      }
+      .graph__img {
+        top: 50%;
+        bottom: auto;
+        right: 0;
+        left: auto;
+        transform: translateX(0) translateY(-50%);
+      }
+    }
+  }
+  .card-prod__box {
+    padding: 1.4375rem 0.9375rem;
+  }
+  .card-prod__mark {
+    font-size: 0.75rem;
+    line-height: 1.66;
+  }
+  .card-prod__content {
+    max-width: 50%;
+    .tl3 {
+      margin-bottom: 0.5rem;
+    }
+    .btn-def {
+      margin: auto 0 0 0;
+    }
+  }
+
+  .graph {
+    width: 21.6875rem;
+  }
+  .graph__img {
+    max-width: 21.6875rem;
+  }
+  .graph__info {
+    bottom: 1.5rem;
+    li {
+      font-size: 1.125rem;
+    }
+  }
+  .graph__wallet {
+    left: auto;
+    right: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card-prod {
+    min-height: auto;
+    &:nth-child(3) {
+      .card-prod__box {
+        padding-bottom: 77%;
+      }
+
+      .graph {
+        top: auto;
+        bottom: 0;
+        right: auto;
+        width: 100%;
+        height: auto;
+        transform: translateX(-50%);
+      }
+      .graph__img {
+        top: auto;
+        bottom: 2.9375rem;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(0);
+        max-width: calc(100% - 2rem);
+      }
+    }
+  }
+  .card-prod__box {
+    padding: 1.4375rem 0.9375rem 77% 0.9375rem;
+  }
+  .card-prod__content {
+    max-width: 100%;
+    .btn-def {
+      margin: auto auto 0 auto;
+    }
+  }
+
+  .graph {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    right: auto;
+  }
+  .graph__img {
+    bottom: 2.9375rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    top: auto;
+    right: auto;
+    max-width: calc(100% - 2rem);
+  }
+  .graph__info {
+    right: auto;
+    left: 1rem;
+  }
+  .graph__wallet {
+    right: auto;
+    left: 1rem;
   }
 }
