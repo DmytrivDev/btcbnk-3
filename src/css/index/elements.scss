@@ -1,5 +1,5 @@
 .pdt1 {
-  padding-top: 11rem;
+  padding-top: 10rem;
 }
 
 .stlgrad {
@@ -11,16 +11,11 @@
   }
 }
 
-.tlnote {
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-}
-
 .tl1,
 .tl2,
-.tl3 {
+.tl3,
+.tl4,
+.tl5 {
   font-weight: 600;
   letter-spacing: -0.03em;
 }
@@ -30,22 +25,19 @@
   line-height: 1;
 }
 .tl2 {
-  font-size: 4rem;
-  line-height: 1.12;
-}
-.tl3 {
   font-size: 3.5rem;
   line-height: 1.14;
 }
+.tl3 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
 .tl4 {
   font-size: 2rem;
-  font-weight: 500;
   line-height: 1.25;
-  letter-spacing: -0.03em;
 }
 .tl5 {
   font-size: 1.5rem;
-  font-weight: 500;
   line-height: 1.33;
 }
 
@@ -94,6 +86,12 @@
     z-index: 2;
   }
 
+  &.bg-bl {
+    &::after {
+      background: var(--cb2);
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -131,20 +129,15 @@
     padding-top: 6rem;
   }
 
-  .tlnote {
-    font-size: 0.75rem;
-    line-height: 1.33;
-  }
-
   .tl1 {
     font-size: 3rem;
     line-height: 1.16;
   }
-  .tl2,
-  .tl3 {
+  .tl2 {
     font-size: 2rem;
     line-height: 1.25;
   }
+  .tl3,
   .tl4 {
     font-size: 1.5rem;
     line-height: 1.33;
