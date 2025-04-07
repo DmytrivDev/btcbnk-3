@@ -7,9 +7,6 @@
 @import url('./settings/general.scss');
 @import url('./index/elements.scss');
 
-/* General */
-@import url('./sections/general/modal.scss');
-
 /* Header */
 @import url('./sections/header/header.scss');
 @import url('./sections/header/parts/navmenu.scss');
@@ -21,6 +18,7 @@
 @import url('./sections/home/advant.scss');
 @import url('./sections/home/product.scss');
 @import url('./sections/home/limit.scss');
+@import url('./sections/home/success.scss');
 
 /* Footer */
 @import url('./sections/footer/footer.scss');
