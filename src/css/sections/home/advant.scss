@@ -1,10 +1,11 @@
 .advant {
   padding-top: 4rem;
 }
-.advant__cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+.advant__body {
+  .splide__list {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 }
 .card-advant {
   width: 100%;
@@ -38,11 +39,17 @@
   .advant {
     padding-top: 0;
   }
-  .advant__cards {
-    gap: 1rem;
+  .advant__body {
+    .splide__track {
+      overflow: visible;
+    }
+    .splide__list {
+      flex-wrap: nowrap;
+      gap: 0;
+    }
   }
   .card-advant {
-    max-width: calc((100% - 2 * 1rem) / 3);
+    max-width: 100%;
     border-radius: 0.75rem;
   }
   .card-advant__box {

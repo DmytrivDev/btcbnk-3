@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@fluejs/noscroll": "^1.0.0",
+    "@splidejs/splide": "^4.1.4",
     "scroll-to-element": "^2.0.3",
     "slide-element": "^2.3.1",
     "axios": "^1.8.1",
