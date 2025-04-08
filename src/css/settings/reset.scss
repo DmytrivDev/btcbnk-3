@@ -1,70 +1,4 @@
 .wrapper {
-  // ============== Accordion ==============
-  .ac {
-    margin: 0;
-    border-radius: 0.75rem;
-    background:
-      linear-gradient(var(--cb), var(--cb)) padding-box,
-      linear-gradient(180deg, var(--ct) 0%, var(--cb2) 100%) border-box !important;
-    border: 0.0625rem solid transparent !important;
-    transition: all 0.15s ease-in;
-
-    .ac-trigger {
-      cursor: default;
-      padding: 0;
-      font: inherit;
-      color: var(--cm);
-      font-size: inherit;
-      line-height: inherit;
-      background-color: var(--cb2);
-      &::after {
-        display: none;
-      }
-    }
-    [class*="__head"] {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      .tl5 {
-        transition: all 0.15s ease-in;
-      }
-      &::after {
-        content: "";
-        flex-shrink: 0;
-        width: 2rem;
-        height: 2rem;
-        background-size: 2rem 2rem;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-image: var(--plus);
-        transition: all 0.15s ease-in;
-      }
-    }
-    &.is-active {
-      .ac-trigger {
-        background: linear-gradient(
-            95deg,
-            rgba(229, 74, 210, 0.16) -16.9%,
-            rgba(50, 20, 162, 0.16) 117.86%
-          ),
-          linear-gradient(180deg, #181818 0%, #111 100%);
-      }
-      .ac-panel {
-        opacity: 1;
-      }
-      [class*="__head"] {
-        &::after {
-          background-image: var(--minus);
-        }
-      }
-    }
-    .ac-panel {
-      opacity: 0;
-      transition-property: height, visibility, opacity !important;
-    }
-  }
-
   // ============== Splide ==============
   .splide__list {
     display: flex !important;
@@ -90,24 +24,6 @@
     &.is-active {
       transform: none;
       opacity: 1;
-    }
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .wrapper {
-    // ============== Accordion ==============
-    .ac {
-      .ac-trigger {
-        padding: 0.9375rem;
-      }
-      [class*="__head"] {
-        &::after {
-          width: 1.5rem;
-          height: 1.5rem;
-          background-size: 1.5rem 1.5rem;
-        }
-      }
     }
   }
 }
