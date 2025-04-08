@@ -23,8 +23,11 @@
       transition: all 0.15s ease-in;
 
       &.isActive {
-        background-color: var(--cy);
+        background-color: var(--cy) !important;
         color: var(--cb);
+      }
+      &:hover {
+        background-color: var(--ct);
       }
     }
   }
