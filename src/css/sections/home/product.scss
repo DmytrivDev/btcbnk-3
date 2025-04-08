@@ -19,6 +19,24 @@
   border-radius: 1rem;
   overflow: hidden;
   min-height: 19rem;
+  &.is-destroy {
+    .ac-panel {
+      overflow: visible !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .graph {
+      height: 100% !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    &:nth-child(3) {
+      .graph {
+        height: 17rem !important;
+      }
+    }
+  }
   &:nth-child(1) {
     grid-area: 1 / 1 / 2 / 2;
   }
@@ -58,6 +76,7 @@
 }
 .card-prod__box {
   position: relative;
+  z-index: 2;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -102,6 +121,9 @@
   right: 1rem;
   height: 100%;
   width: 24.1875rem;
+  .btn-def {
+    display: none;
+  }
 }
 .graph__img {
   position: absolute;
@@ -154,6 +176,13 @@
 
   .card-prod {
     min-height: 16.875rem;
+    &.is-destroy {
+      &:nth-child(3) {
+        .graph {
+          height: 100% !important;
+        }
+      }
+    }
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
@@ -161,7 +190,7 @@
     }
     &:nth-child(3) {
       .card-prod__box {
-        padding-bottom: 0.9375rem;
+        padding-bottom: 1.4375rem;
       }
       .card-prod__mark {
         margin-bottom: 1rem;
@@ -225,63 +254,142 @@
 
 @media screen and (max-width: 768px) {
   .card-prod {
+    position: relative;
     min-height: auto;
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      top: 1.625rem;
+      right: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-size: 1.5rem 1.5rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: var(--vectorLangGrey);
+      transition: all 0.25s ease-in;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+          95deg,
+          rgba(229, 74, 210, 0.16) -16.9%,
+          rgba(50, 20, 162, 0.16) 117.86%
+        ),
+        linear-gradient(180deg, #181818 0%, #111 100%);
+    }
+
+    &.isOpened {
+      &::after {
+        transform: rotateX(180deg);
+      }
+      .card-prod__panel {
+        max-height: 80.5vw;
+      }
+      .card-prod__box {
+        background-color: transparent;
+      }
+    }
+
     &:nth-child(3) {
       .card-prod__box {
-        padding-bottom: 77%;
+        padding-bottom: 0.9375rem;
       }
 
       .graph {
         top: auto;
-        bottom: 0;
+        bottom: auto;
         right: auto;
+        left: auto;
         width: 100%;
-        height: auto;
-        transform: translateX(-50%);
+        transform: translateX(0);
       }
       .graph__img {
         top: auto;
-        bottom: 2.9375rem;
+        bottom: 1.4375rem;
         right: auto;
         left: 50%;
         transform: translateX(-50%) translateY(0);
-        max-width: calc(100% - 2rem);
+        max-width: 100%;
       }
     }
   }
   .card-prod__box {
-    padding: 1.4375rem 0.9375rem 77% 0.9375rem;
+    padding: 1.4375rem 0.9375rem;
+    transition: all 0.35s ease-in;
+  }
+  .card-prod__mark {
+    margin-right: 1.875rem;
   }
   .card-prod__content {
     max-width: 100%;
     .btn-def {
+      display: none;
       margin: auto auto 0 auto;
+    }
+    .txt3 {
+      margin-bottom: 0;
     }
   }
 
+  .card-prod__panel {
+    transition: all 0.35s ease-in;
+    overflow: hidden;
+    max-height: 0;
+  }
+
   .graph {
+    margin-top: 2rem;
+    position: relative;
     width: 100%;
-    height: auto;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 76vw !important;
+    bottom: auto;
+    left: auto;
+    transform: translateX(0);
     top: auto;
     right: auto;
+    .btn-def {
+      display: flex;
+      position: relative;
+      z-index: 3;
+    }
   }
   .graph__img {
-    bottom: 2.9375rem;
+    bottom: 1.4375rem;
     left: 50%;
     transform: translateX(-50%) translateY(0);
     top: auto;
     right: auto;
-    max-width: calc(100% - 2rem);
+    max-width: 100%;
   }
   .graph__info {
     right: auto;
     left: 1rem;
+    bottom: 0;
   }
   .graph__wallet {
     right: auto;
     left: 1rem;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-prod {
+    &.isOpened {
+      .card-prod__panel {
+        max-height: 87vw;
+      }
+    }
+  }
+  .graph {
+    height: 80vw !important;
   }
 }
