@@ -3,11 +3,13 @@
 }
 
 .stlgrad {
-  span {
-    background: linear-gradient(90deg, #c440c9 36.67%, #5298e0 117.05%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  & > span {
+    span {
+      background: linear-gradient(90deg, #c440c9 36.67%, #5298e0 117.05%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
 

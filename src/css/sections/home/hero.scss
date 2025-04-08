@@ -25,11 +25,21 @@
   .tl1 {
     text-align: center;
     margin-bottom: 1.5rem;
+    & > span {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
   .txt1 {
     text-align: center;
     margin-bottom: 2rem;
     max-width: 55.3125rem;
+    & > p {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -87,16 +97,35 @@
   }
   .hero__body {
     align-items: start;
-    padding: 3.75rem 0 8.5rem 0;
+    padding: 7.5rem 0 12.5rem 0;
   }
   .hero__content {
     .tl1 {
-      max-width: 45.3125rem;
+      max-width: 38.75rem;
       margin-bottom: 1rem;
+      & > span {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
     }
     .txt1 {
       margin-bottom: 2.5rem;
-      max-width: 42.8125rem;
+      max-width: 38.75rem;
+      & > p {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+    .btn-def {
+      display: none;
     }
   }
 
@@ -104,8 +133,8 @@
     width: 90rem;
   }
   .hero__planet {
-    top: 23.125rem;
-    width: calc(100% + 2.875rem);
+    top: 21.875rem;
+    width: calc(100% + 3.125rem);
     max-width: 64.375rem;
   }
 }
