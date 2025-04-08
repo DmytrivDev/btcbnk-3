@@ -139,6 +139,7 @@
     }
   }
   .footer__info {
+    order: 2;
     .custom-logo-link {
       margin-bottom: 1.5rem;
       span {
@@ -155,6 +156,7 @@
     margin-bottom: 2rem;
   }
   .footer__nav {
+    order: 1;
     flex-wrap: wrap;
     justify-content: start;
     gap: 3rem 3.75rem;

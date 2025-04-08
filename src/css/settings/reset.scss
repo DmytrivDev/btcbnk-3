@@ -95,9 +95,10 @@
     margin: 0;
     background-color: var(--cd2);
     transition: all 0.15s ease-in;
+    opacity: 0.24;
     &.is-active {
       transform: none;
-      opacity: 0.24;
+      opacity: 1;
     }
   }
 }
