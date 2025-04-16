@@ -8,6 +8,7 @@ import './parts/splidecust.js';
 import './parts/splide.js';
 import './parts/accord.js';
 import './parts/tabs.js';
+import './parts/accordion.js';
 import './parts/forms.js';
 import './parts/modal.js';
 
